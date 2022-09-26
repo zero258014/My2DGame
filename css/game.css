@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+
+body {
+    background-color: black;
+}
+#gamePosition{
+/* 水平・垂直方向の中央揃え  */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#gameView {
+    display: inline-block;
+    position: relative;
+    
+}
+
+#transition {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#playerHPBar {
+    background-color: antiquewhite;
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    border: 3px solid black;
+    padding: 12px;
+}
+
+#name {
+    font-size: 16px;
+}
+
+#playerHp {
+    height: 5px;
+
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#playerHp_die {
+    height: 5px;
+    margin-top: 5px;
+    background-color: #ccc;
+}
+
+#monsterHPBar {
+    background-color: antiquewhite;
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    border: 3px solid black;
+    padding: 12px;
+}
+
+#monsterName {
+    font-size: 16px;
+}
+
+#monsterHp {
+    height: 5px;
+
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#monsterHp_die {
+    height: 5px;
+    margin-top: 5px;
+    background-color: #ccc;
+}
+
+#panel {
+    background-color: antiquewhite;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-top: solid 4px black;
+    display: flex;
+}
+
+#dialogue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: antiquewhite;
+    padding: 14px;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+#skillSelect {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#describe {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 4px solid black;
+    border-top: solid 2px black;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+button {
+    background-color: antiquewhite;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#userInterface {
+    display: none;
+}
+
+/* canvas {
+    margin-left: 200px;
+} */

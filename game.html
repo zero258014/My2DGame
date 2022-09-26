@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/game.css">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+
+    <title>Welcome My RPG Game</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="gamePosition">
+            <div id="gameView">
+                <div id="transition"></div>
+
+                <canvas></canvas>
+                <div id="userInterface">
+                    <!-- キャラのHP -->
+                    <div id="playerHPBar">
+                        <h1 id="name" th:text="${playerName}">player</h1>
+                        <div style="position: relative;">
+                            <div id="playerHp_die"></div>
+                            <div id="playerHp"></div>
+                        </div>
+                    </div>
+
+                    <!-- モンスターのHP -->
+                    <div id="monsterHPBar">
+                        <h1 id="monsterName">スライム</h1>
+                        <div style="position: relative;">
+                            <div id="monsterHp_die"></div>
+                            <div id="monsterHp"></div>
+                        </div>
+                    </div>
+
+                    <div id="panel">
+                        <div id="dialogue">会話表示</div>
+                        <div id="skillSelect">
+
+                        </div>
+                        <div id="describe">
+                            <h1>スキル説明</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- bgm再生用 cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+        integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- gsap cdn 戦闘シーンの動画用 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+        integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="Javascript/Data/audio.js"></script>
+    <script src="Javascript/Data/battleZones.js"></script>
+    <script src="Javascript/Data/collisions.js"></script>
+    <script src="Javascript/Data/attacks.js"></script>
+    <script src="Javascript/Data/monsters.js"></script>
+    <script src="Javascript/Data/characters.js"></script>
+
+    <script src="Javascript/class.js"></script>
+
+    <script src="Javascript/game.js"></script>
+    <script src="Javascript/battleScene.js"></script>
+
+</body>
+
+</html>
